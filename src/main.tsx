@@ -1,8 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client'
+import { PrimeReactProvider } from 'primereact/api';
+import Tailwind from 'primereact/passthrough/tailwind';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    
-  </StrictMode>,
+import App from './App';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <PrimeReactProvider value={{unstyled: true, pt: Tailwind}}>
+      <App />
+    </PrimeReactProvider>
+  </React.StrictMode>
 )

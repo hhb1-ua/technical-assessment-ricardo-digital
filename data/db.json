@@ -1,6 +1,6 @@
 {
     "users": [
-        {"id": 1, "full_name": "Test Person", "dni": "00000000A", "company_id": 0}
+        {"id": 1, "name": "Test Person", "dni": "00000000A", "company_id": 0}
     ],
     "companies": [
         {"id": 1, "name": "Test Company", "nif": "A00000000"}

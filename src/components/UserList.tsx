@@ -19,12 +19,12 @@ export const UserList = () => {
   
   return (
     <DataTable value={users}>
-      <Column field="id" header="" />
-      <Column field="dni" header="" />
-      <Column field="name" header="" />
-      <Column field="email" header="" />
-      <Column field="birthday" header="" />
-      <Column field="company_name" header="" />
+      <Column field="id" header="ID" />
+      <Column field="dni" header="DNI" />
+      <Column field="name" header="Full name" />
+      <Column field="email" header="Email" />
+      <Column field="birthday" header="Birthday" />
+      <Column field="company_name" header="Company" />
     </DataTable>
   );
 }

@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { User } from '../types/User';
 import { Company } from '../types/Company';
 import { readUsers } from '../services/userService';
+import { readCompanies } from '../services/companyService';
 
 export const useUsers = () => {
   // This adds a 'company_name' property to the User interface
   type ExtendedUser = User & {company_name?: string};
 
-  const [companies, setCompanies] = useState<Company[]>([]);
   const [users, setUsers] = useState<ExtendedUser[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -15,8 +15,22 @@ export const useUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        setUsers(await readUsers());
-        setCompanies(await readCompanies());
+        const listedUsers: ExtendedUser[] = await readUsers();
+        const listedCompanies: Company[] = await readCompanies();
+
+        const mappedData: ExtendedUser[] = listedUsers.map(user => {
+          // Find the company name of the company whose id matches the user's company_id
+          const companyName = listedCompanies.find(company =>
+            company.id == user.company_id
+          )?.name;
+          
+          // If no such company was found, this will default to 'Unknown'
+          user.company_name = companyName || 'Unknown';
+
+          return user;
+        });
+
+        setUsers(mappedData);
       } catch (error) {
         setError(`Failed to fetch data, ${error}`);
       } finally {

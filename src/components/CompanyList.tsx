@@ -7,13 +7,13 @@ export const CompanyList = () => {
 
   if (loading) {
     return (
-      <></>
+      <p>Loading...</p>
     );
   }
 
   if (error) {
     return (
-      <></>
+      <p>{error}</p>
     );
   }
 
@@ -21,7 +21,9 @@ export const CompanyList = () => {
     <DataTable value={companies}>
       <Column field="id" header="ID" />
       <Column field="cif" header="CIF" />
-      <Column field="name" header="Company name" />
+      <Column field="name" header="Name" />
+      <Column field="sector" header="Sector" />
+      <Column field="address" header="Address" />
     </DataTable>
   );
 }

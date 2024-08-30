@@ -16,11 +16,18 @@ const userSchema = z.object({
 export const createUser = async (user: Omit<User, 'id'>): Promise<User> => {
   userSchema.parse(user);
 
-  return (await axios.post<User>(`${HOST}/users`, user)).data;
+  /* 
+    This should NOT be neccessary in an actual deployment with a proper API,
+    as the IDs should be assigned by the server. Still, since I'm using json-server,
+    I need to run this code to get the next ID and assign it to the User object.
+  */
+  const nextId = (await readUsers()).length;
+
+  return (await axios.post<User>(`${HOST}/user`, {id: nextId, ...user})).data;
 }
 
 export const readUsers = async (): Promise<User[]> => {
-  return (await axios.get<User[]>(`${HOST}/users`)).data;
+  return (await axios.get<User[]>(`${HOST}/user`)).data;
 }
 
 export const updateUser = async (user: User): Promise<User> => {

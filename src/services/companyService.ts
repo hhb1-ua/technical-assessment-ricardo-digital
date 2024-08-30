@@ -13,7 +13,14 @@ const companySchema = z.object({
 export const createCompany = async (company: Omit<Company, 'id'>): Promise<Company> => {
   companySchema.parse(company);
 
-  return (await axios.post<Company>(`${HOST}/company`, company)).data;
+  /* 
+    This should NOT be neccessary in an actual deployment with a proper API,
+    as the IDs should be assigned by the server. Still, since I'm using json-server,
+    I need to run this code to get the next ID and assign it to the Company object.
+  */
+  const nextId = (await readCompanies()).length;
+
+  return (await axios.post<Company>(`${HOST}/company`, {id: nextId, ...company})).data;
 }
 
 export const readCompanies = async (): Promise<Company[]> => {

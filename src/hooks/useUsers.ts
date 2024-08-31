@@ -6,7 +6,7 @@ import { readCompanies } from '../services/companyService';
 
 export const useUsers = () => {
   // This adds a 'company_name' property to the User interface
-  type ExtendedUser = User & {company_name?: string};
+  type ExtendedUser = User & {associated_company?: Company};
 
   const [users, setUsers] = useState<ExtendedUser[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -19,14 +19,11 @@ export const useUsers = () => {
         const listedCompanies: Company[] = await readCompanies();
 
         const mappedData: ExtendedUser[] = listedUsers.map(user => {
-          // Find the company name of the company whose id matches the user's company_id
-          const companyName = listedCompanies.find(company =>
+          // Find the company whose id matches the user's company_id
+          user.associated_company = listedCompanies.find(company =>
             company.id == user.company_id
-          )?.name;
+          );
           
-          // If no such company was found, this will default to 'Unknown'
-          user.company_name = companyName || 'Unknown';
-
           return user;
         });
 

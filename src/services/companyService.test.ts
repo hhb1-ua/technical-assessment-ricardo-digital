@@ -3,15 +3,7 @@ import { Company } from '../types/Company';
 import { createCompany, readCompanies, updateCompany, deleteCompany } from './companyService';
 
 test('Read all companies', async () => {
-  let response: Company[] | null;
-
-  try {
-    response = await readCompanies();
-  } catch {
-    response = null;
-  }
-
-  expect(response).not.toBeNull();
+  expect(async () => await readCompanies).not.toThrowError();
 });
 
 test('Create a company with correct data and delete it', async () => { 
@@ -22,17 +14,10 @@ test('Create a company with correct data and delete it', async () => {
     address: '1 Fake Street'
   }
 
-  let response: Company | null;
-
-  try {
-    response = await createCompany(company);
-  } catch {
-    response = null;
-  }
-
-  expect(response).not.toBeNull();
-
-  expect(async () => await deleteCompany(response!)).not.toThrowError();
+  expect(async () => { 
+    const response = await createCompany(company);
+    await deleteCompany(response);
+  }).not.toThrowError();
 });
 
 test('Update a company using incorrect data', async () => {
@@ -44,13 +29,7 @@ test('Update a company using incorrect data', async () => {
     address: '1 Fake Street'
   }
 
-  let response: Company | null;
-
-  try {
-    response = await updateCompany(company);
-  } catch {
-    response = null;
-  }
-
-  expect(response).toBeNull();
+  await expect(
+    async () => await updateCompany(company)
+  ).rejects.not.toBeNull()
 });

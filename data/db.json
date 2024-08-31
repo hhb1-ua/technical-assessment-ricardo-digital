@@ -1,66 +1,316 @@
 {
-    "user": [
-        {"id":1,"dni":"90925329P","name":"Marci Anthony","email":"manthony0@harvard.edu","birthday":"1986-03-11","company_id":9},
-        {"id":2,"dni":"00362549T","name":"Melisandra Massinger","email":"mmassinger1@thetimes.co.uk","birthday":"1996-09-23","company_id":7},
-        {"id":3,"dni":"27836721M","name":"Colly Brimmicombe","email":"cbrimmicombe2@chicagotribune.com","birthday":"1979-08-19","company_id":10},
-        {"id":4,"dni":"33286374A","name":"Jordanna Bullar","email":"jbullar3@walmart.com","birthday":"1976-04-05","company_id":2},
-        {"id":5,"dni":"21845054G","name":"Ag Hussy","email":"ahussy4@reuters.com","birthday":"1986-04-09","company_id":9},
-        {"id":6,"dni":"26625518B","name":"Anderson Puttnam","email":"aputtnam5@twitter.com","birthday":"1974-03-11","company_id":2},
-        {"id":7,"dni":"21195248L","name":"Ellie Morbey","email":"emorbey6@oracle.com","birthday":"1984-09-08","company_id":5},
-        {"id":8,"dni":"62482290C","name":"Randy Corran","email":"rcorran7@networksolutions.com","birthday":"1982-02-15","company_id":6},
-        {"id":9,"dni":"43615262K","name":"Harland Piggen","email":"hpiggen8@ucoz.ru","birthday":"2000-01-07","company_id":7},
-        {"id":10,"dni":"84878830V","name":"Merrily Shortcliffe","email":"mshortcliffe9@harvard.edu","birthday":"1980-06-20","company_id":10},
-        {"id":11,"dni":"39873409G","name":"Lynea Croney","email":"lcroneya@posterous.com","birthday":"1999-06-02","company_id":8},
-        {"id":12,"dni":"77176246H","name":"Rockey Atlee","email":"ratleeb@sogou.com","birthday":"1999-01-09","company_id":3},
-        {"id":13,"dni":"46291938B","name":"Fawn Minall","email":"fminallc@barnesandnoble.com","birthday":"1986-05-04","company_id":2},
-        {"id":14,"dni":"19692466H","name":"Dewey Carrett","email":"dcarrettd@tmall.com","birthday":"1994-03-30","company_id":10},
-        {"id":15,"dni":"25685105Q","name":"Celestina Cobleigh","email":"ccobleighe@google.com.hk","birthday":"1984-05-01","company_id":7},
-        {"id":16,"dni":"49668838C","name":"Jessy Pitford","email":"jpitfordf@ezinearticles.com","birthday":"1977-04-26","company_id":1},
-        {"id":17,"dni":"46517704J","name":"Langsdon Humes","email":"lhumesg@goo.ne.jp","birthday":"1991-05-31","company_id":2},
-        {"id":18,"dni":"52391634W","name":"Rickey Stabler","email":"rstablerh@shop-pro.jp","birthday":"1998-05-10","company_id":8},
-        {"id":19,"dni":"30995038G","name":"Gavin Seymer","email":"gseymeri@yandex.ru","birthday":"1976-01-20","company_id":10},
-        {"id":20,"dni":"78567929Y","name":"Marsiella Suff","email":"msuffj@discovery.com","birthday":"1991-11-13","company_id":4},
-        {"id":21,"dni":"52674353Z","name":"Regine Sewill","email":"rsewillk@dagondesign.com","birthday":"1991-06-11","company_id":4},
-        {"id":22,"dni":"15545971Y","name":"Renell Ayrton","email":"rayrtonl@t.co","birthday":"1994-09-13","company_id":1},
-        {"id":23,"dni":"71674952L","name":"Fielding Cowper","email":"fcowperm@unesco.org","birthday":"1998-08-22","company_id":5},
-        {"id":24,"dni":"06038783C","name":"Marlo De Cruze","email":"mden@nymag.com","birthday":"1981-10-29","company_id":6},
-        {"id":25,"dni":"91569655O","name":"Melisent Barling","email":"mbarlingo@linkedin.com","birthday":"1999-10-16","company_id":9},
-        {"id":26,"dni":"29765821K","name":"Winnah Mowatt","email":"wmowattp@bluehost.com","birthday":"1994-03-07","company_id":8},
-        {"id":27,"dni":"81477221M","name":"Maurita Baird","email":"mbairdq@thetimes.co.uk","birthday":"1979-10-15","company_id":2},
-        {"id":28,"dni":"59884572O","name":"Herschel Tabourin","email":"htabourinr@skype.com","birthday":"1995-10-05","company_id":8},
-        {"id":29,"dni":"17566844D","name":"Sherlocke Blaes","email":"sblaess@umn.edu","birthday":"1990-01-18","company_id":9},
-        {"id":30,"dni":"59577944I","name":"Carlin Ratledge","email":"cratledget@wix.com","birthday":"1982-08-18","company_id":3},
-        {"id":31,"dni":"17293212Q","name":"Dacey Westwood","email":"dwestwoodu@symantec.com","birthday":"1983-04-05","company_id":1},
-        {"id":32,"dni":"67693593Z","name":"Dianemarie McQuillen","email":"dmcquillenv@mashable.com","birthday":"1981-03-03","company_id":9},
-        {"id":33,"dni":"29028806Y","name":"Randolf Middler","email":"rmiddlerw@flickr.com","birthday":"1981-09-26","company_id":4},
-        {"id":34,"dni":"94363187T","name":"Merola Tanton","email":"mtantonx@reverbnation.com","birthday":"1976-09-27","company_id":8},
-        {"id":35,"dni":"22264381M","name":"Krystal Killeen","email":"kkilleeny@washington.edu","birthday":"1988-08-30","company_id":4},
-        {"id":36,"dni":"71584920V","name":"Morgun Fair","email":"mfairz@cdbaby.com","birthday":"1976-10-18","company_id":8},
-        {"id":37,"dni":"33572568V","name":"Matthus Edwins","email":"medwins10@bloglines.com","birthday":"1981-12-29","company_id":7},
-        {"id":38,"dni":"05521175K","name":"Tremain Busfield","email":"tbusfield11@jalbum.net","birthday":"1979-04-12","company_id":5},
-        {"id":39,"dni":"71639059T","name":"Dominik Hillan","email":"dhillan12@ow.ly","birthday":"1991-09-12","company_id":6},
-        {"id":40,"dni":"87454575O","name":"Susannah Renehan","email":"srenehan13@exblog.jp","birthday":"1988-08-23","company_id":10},
-        {"id":41,"dni":"40920803L","name":"Arlie Brocket","email":"abrocket14@home.pl","birthday":"1995-07-24","company_id":1},
-        {"id":42,"dni":"63635308Z","name":"Arielle Dobrowolny","email":"adobrowolny15@sourceforge.net","birthday":"1972-12-13","company_id":7},
-        {"id":43,"dni":"13376606D","name":"Imogene Doe","email":"idoe16@pcworld.com","birthday":"1978-12-28","company_id":2},
-        {"id":44,"dni":"74593458E","name":"Jeanne Wakeling","email":"jwakeling17@usatoday.com","birthday":"1978-11-11","company_id":9},
-        {"id":45,"dni":"60466481C","name":"Karol Mosley","email":"kmosley18@discuz.net","birthday":"1997-09-10","company_id":6},
-        {"id":46,"dni":"26546243L","name":"Benny McGeoch","email":"bmcgeoch19@live.com","birthday":"1974-10-02","company_id":1},
-        {"id":47,"dni":"52218959L","name":"Seymour Singleton","email":"ssingleton1a@wiley.com","birthday":"1984-02-26","company_id":5},
-        {"id":48,"dni":"64563031O","name":"Shem Edwinson","email":"sedwinson1b@sbwire.com","birthday":"1981-12-22","company_id":7},
-        {"id":49,"dni":"57162319H","name":"Edward Puddan","email":"epuddan1c@spiegel.de","birthday":"1987-12-02","company_id":2},
-        {"id":50,"dni":"19170506P","name":"Ava Gregory","email":"agregory1d@wired.com","birthday":"1993-09-23","company_id":2}
-    ],
-    "company": [
-        {"id":1,"cif":"K25458331","name":"Koch-Emmerich","sector":"Consumer Services","address":"88 Muir Hill"},
-        {"id":2,"cif":"S5442716J","name":"Baumbach, Ortiz and Lehner","sector":"Public Utilities","address":"76 Johnson Way"},
-        {"id":3,"cif":"Q7864697A","name":"Wunsch Group","sector":"Consumer Services","address":"6 Oneill Junction"},
-        {"id":4,"cif":"N70241246","name":"Breitenberg-Williamson","sector":"Finance","address":"42 Thompson Pass"},
-        {"id":5,"cif":"U74600728","name":"Treutel Group","sector":"Consumer Non-Durables","address":"3145 5th Way"},
-        {"id":6,"cif":"L5099563H","name":"Kulas Group","sector":"Consumer Non-Durables","address":"50166 Aberg Avenue"},
-        {"id":7,"cif":"C7989393G","name":"Mohr, Ward and Greenfelder","sector":"Energy","address":"87 Sheridan Plaza"},
-        {"id":8,"cif":"L9724857A","name":"Vandervort LLC","sector":"n/a","address":"083 Forest Way"},
-        {"id":9,"cif":"V99830330","name":"Oberbrunner and Sons","sector":"Finance","address":"6185 Anniversary Circle"},
-        {"id":10,"cif":"H34278506","name":"Rath-O'Keefe","sector":"Consumer Durables","address":"48009 Loomis Point"}
-    ]
- }
+  "user": [
+    {
+      "id": 1,
+      "dni": "85331677Q",
+      "name": "Ashia Patley",
+      "email": "apatley0@hao123.com",
+      "birthday": "1977-09-07",
+      "company_id": 8
+    },
+    {
+      "id": 2,
+      "dni": "38863772I",
+      "name": "Thelma Versey",
+      "email": "tversey1@tinyurl.com",
+      "birthday": "1981-01-10",
+      "company_id": 5
+    },
+    {
+      "id": 3,
+      "dni": "43163797E",
+      "name": "Graeme McCumskay",
+      "email": "gmccumskay2@imdb.com",
+      "birthday": "1986-03-14",
+      "company_id": 2
+    },
+    {
+      "id": 4,
+      "dni": "83283053M",
+      "name": "Theodore Boatswain",
+      "email": "tboatswain3@usa.gov",
+      "birthday": "1988-03-10",
+      "company_id": 6
+    },
+    {
+      "id": 5,
+      "dni": "63446315Q",
+      "name": "Ardella McMechan",
+      "email": "amcmechan4@surveymonkey.com",
+      "birthday": "1984-03-04",
+      "company_id": 6
+    },
+    {
+      "id": 6,
+      "dni": "98651446K",
+      "name": "Sonia Allsop",
+      "email": "sallsop5@drupal.org",
+      "birthday": "1994-12-15",
+      "company_id": 2
+    },
+    {
+      "id": 7,
+      "dni": "59442745J",
+      "name": "Sabra McCorley",
+      "email": "smccorley6@123-reg.co.uk",
+      "birthday": "1992-07-07",
+      "company_id": 7
+    },
+    {
+      "id": 8,
+      "dni": "33707954O",
+      "name": "Cassandre Hillaby",
+      "email": "chillaby7@icio.us",
+      "birthday": "1988-01-23",
+      "company_id": 1
+    },
+    {
+      "id": 9,
+      "dni": "66315175Q",
+      "name": "Derk McTeer",
+      "email": "dmcteer8@abc.net.au",
+      "birthday": "1994-01-07",
+      "company_id": 8
+    },
+    {
+      "id": 10,
+      "dni": "72988315P",
+      "name": "Pail Cullimore",
+      "email": "pcullimore9@cdc.gov",
+      "birthday": "1988-02-27",
+      "company_id": 2
+    },
+    {
+      "id": 11,
+      "dni": "44147458S",
+      "name": "Augusta Seddon",
+      "email": "aseddona@cdbaby.com",
+      "birthday": "1991-05-14",
+      "company_id": 2
+    },
+    {
+      "id": 12,
+      "dni": "68262719F",
+      "name": "Bondy Cotes",
+      "email": "bcotesb@digg.com",
+      "birthday": "1983-11-03",
+      "company_id": 5
+    },
+    {
+      "id": 13,
+      "dni": "99340959G",
+      "name": "Lin Bellows",
+      "email": "lbellowsc@about.com",
+      "birthday": "1978-02-18",
+      "company_id": 2
+    },
+    {
+      "id": 14,
+      "dni": "48497933E",
+      "name": "Harlan Djurevic",
+      "email": "hdjurevicd@flavors.me",
+      "birthday": "1977-06-09",
+      "company_id": 8
+    },
+    {
+      "id": 15,
+      "dni": "22065598J",
+      "name": "Karna Margram",
+      "email": "kmargrame@ft.com",
+      "birthday": "1987-11-20",
+      "company_id": 5
+    },
+    {
+      "id": 16,
+      "dni": "06489796M",
+      "name": "Neill Fakes",
+      "email": "nfakesf@ted.com",
+      "birthday": "1997-08-16",
+      "company_id": 9
+    },
+    {
+      "id": 17,
+      "dni": "61720981S",
+      "name": "Georas O'Kieran",
+      "email": "gokierang@reddit.com",
+      "birthday": "1987-05-22",
+      "company_id": 2
+    },
+    {
+      "id": 18,
+      "dni": "21107243O",
+      "name": "Stirling Playdon",
+      "email": "splaydonh@networksolutions.com",
+      "birthday": "1976-08-09",
+      "company_id": 9
+    },
+    {
+      "id": 19,
+      "dni": "95292912C",
+      "name": "Leon Edsell",
+      "email": "ledselli@behance.net",
+      "birthday": "1995-05-04",
+      "company_id": 7
+    },
+    {
+      "id": 20,
+      "dni": "02406305M",
+      "name": "Jeffy Hearon",
+      "email": "jhearonj@fema.gov",
+      "birthday": "1983-09-19",
+      "company_id": 10
+    },
+    {
+      "id": 21,
+      "dni": "85813691B",
+      "name": "Roma Ralston",
+      "email": "rralstonk@list-manage.com",
+      "birthday": "1984-01-18",
+      "company_id": 3
+    },
+    {
+      "id": 22,
+      "dni": "05343640V",
+      "name": "Camellia Braitling",
+      "email": "cbraitlingl@shinystat.com",
+      "birthday": "1995-02-14",
+      "company_id": 5
+    },
+    {
+      "id": 23,
+      "dni": "18757622F",
+      "name": "Fallon Lawther",
+      "email": "flawtherm@sina.com.cn",
+      "birthday": "1997-02-12",
+      "company_id": 10
+    },
+    {
+      "id": 24,
+      "dni": "24496678S",
+      "name": "Dianne Foakes",
+      "email": "dfoakesn@toplist.cz",
+      "birthday": "1982-02-16",
+      "company_id": 4
+    },
+    {
+      "id": 25,
+      "dni": "65364516D",
+      "name": "Ludwig Northcott",
+      "email": "lnorthcotto@marriott.com",
+      "birthday": "1987-11-26",
+      "company_id": 9
+    },
+    {
+      "id": 26,
+      "dni": "44286935E",
+      "name": "Aeriel Tamburo",
+      "email": "atamburop@woothemes.com",
+      "birthday": "1978-07-12",
+      "company_id": 2
+    },
+    {
+      "id": 27,
+      "dni": "01918720F",
+      "name": "Francklyn Roke",
+      "email": "frokeq@timesonline.co.uk",
+      "birthday": "1983-02-17",
+      "company_id": 9
+    },
+    {
+      "id": 28,
+      "dni": "16130834F",
+      "name": "Neale Colby",
+      "email": "ncolbyr@gmpg.org",
+      "birthday": "1996-02-18",
+      "company_id": 10
+    },
+    {
+      "id": 29,
+      "dni": "37052786F",
+      "name": "Sherry Lattka",
+      "email": "slattkas@irs.gov",
+      "birthday": "1982-03-01",
+      "company_id": 2
+    },
+    {
+      "id": 30,
+      "dni": "09591148R",
+      "name": "Jeralee Badrick",
+      "email": "jbadrickt@baidu.com",
+      "birthday": "1999-12-24",
+      "company_id": 7
+    }
+  ],
+  "company": [
+    {
+      "id": 1,
+      "cif": "K25458331",
+      "name": "Koch-Emmerich",
+      "sector": "Consumer Services",
+      "address": "88 Muir Hill"
+    },
+    {
+      "id": 2,
+      "cif": "S5442716J",
+      "name": "Baumbach, Ortiz and Lehner",
+      "sector": "Public Utilities",
+      "address": "76 Johnson Way"
+    },
+    {
+      "id": 3,
+      "cif": "Q7864697A",
+      "name": "Wunsch Group",
+      "sector": "Consumer Services",
+      "address": "6 Oneill Junction"
+    },
+    {
+      "id": 4,
+      "cif": "N70241246",
+      "name": "Breitenberg-Williamson",
+      "sector": "Finance",
+      "address": "42 Thompson Pass"
+    },
+    {
+      "id": 5,
+      "cif": "U74600728",
+      "name": "Treutel Group",
+      "sector": "Consumer Non-Durables",
+      "address": "3145 5th Way"
+    },
+    {
+      "id": 6,
+      "cif": "L5099563H",
+      "name": "Kulas Group",
+      "sector": "Consumer Non-Durables",
+      "address": "50166 Aberg Avenue"
+    },
+    {
+      "id": 7,
+      "cif": "C7989393G",
+      "name": "Mohr, Ward and Greenfelder",
+      "sector": "Energy",
+      "address": "87 Sheridan Plaza"
+    },
+    {
+      "id": 8,
+      "cif": "L9724857A",
+      "name": "Vandervort LLC",
+      "sector": "n/a",
+      "address": "083 Forest Way"
+    },
+    {
+      "id": 9,
+      "cif": "V99830330",
+      "name": "Oberbrunner and Sons",
+      "sector": "Finance",
+      "address": "6185 Anniversary Circle"
+    },
+    {
+      "id": 10,
+      "cif": "H34278506",
+      "name": "Rath-O'Keefe",
+      "sector": "Consumer Durables",
+      "address": "48009 Loomis Point"
+    }
+  ]
+}

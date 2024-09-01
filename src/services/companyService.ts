@@ -20,7 +20,8 @@ export const createCompany = async (company: Omit<Company, 'id'>): Promise<Compa
     as the IDs should be assigned by the server. Still, since I'm using json-server,
     I need to run this code to get the next ID and assign it to the Company object.
   */
-  const nextId: number = (await readCompanies()).length + 1;
+    const lastCompany: Company | undefined = (await readCompanies()).pop();
+    const nextId: number = lastCompany ? lastCompany.id + 1 : 1;
 
   return (await axios.post<Company>(`${HOST}/company`, {id: nextId, ...company})).data;
 }

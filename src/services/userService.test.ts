@@ -29,9 +29,9 @@ test('Update a user using incorrect data', async () => {
     email: 'INCORRECT EMAIL',
     birthday: '2000-01-01',
     company_id: 1
-  };
+  }
 
-  await expect(
-    async () => await updateUser(user)
+  await expect(async () => 
+    await updateUser(user)
   ).rejects.not.toBeNull()
 });

@@ -21,7 +21,8 @@ export const createUser = async (user: Omit<User, 'id'>): Promise<User> => {
     as the IDs should be assigned by the server. Still, since I'm using json-server,
     I need to run this code to get the next ID and assign it to the User object.
   */
-  const nextId: number = (await readUsers()).length + 1;
+  const lastUser: User | undefined = (await readUsers()).pop();
+  const nextId: number = lastUser ? lastUser.id + 1 : 1;
 
   return (await axios.post<User>(`${HOST}/user`, {id: nextId, ...user})).data;
 }

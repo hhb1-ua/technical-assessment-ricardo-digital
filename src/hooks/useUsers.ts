@@ -5,7 +5,7 @@ import { readUsers } from '../services/userService';
 import { readCompanies } from '../services/companyService';
 
 export const useUsers = () => {
-  // This adds a 'company_name' property to the User interface
+  // This adds an 'associated_company' property to the User interface
   type ExtendedUser = User & {associated_company?: Company};
 
   const [users, setUsers] = useState<ExtendedUser[]>([]);

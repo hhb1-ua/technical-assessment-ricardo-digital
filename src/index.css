@@ -1,3 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.p-datatable {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.p-row-odd {
+  background: lightgray;
+}
+
+.p-button {
+  background: none;
+  border: none;
+  margin-left: .75rem;
+}
+
+.p-datatable-thead {
+  background: black;
+  color: whitesmoke;
+}
+
+tr td, tr th {
+  padding: .75rem;
+}
+
+tr td:first-child, tr th:first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+tr td:last-child {
+  text-align: center;
+}
+
+.pi {
+  font-size: 1rem;
+}

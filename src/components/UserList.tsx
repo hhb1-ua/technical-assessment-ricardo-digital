@@ -3,16 +3,20 @@ import { Column } from 'primereact/column';
 import { useUsers } from '../hooks/useUsers';
 import { Button } from 'primereact/button';
 import { User } from '../types/User';
-import { deleteUser } from '../services/userService';
+import { deleteUser, updateUser } from '../services/userService';
 
-export const DeleteUserButton = (user: User) => {
-  return (
-    <Button
-      label='Delete'
-      icon='pi pi-trash'
-      className='p-button-danger'
-      onClick={() => deleteUser(user)}
-    />
+export const UserOptions = (user: User) => {
+  return (    
+    <>
+      <Button
+        icon='pi pi-pencil'
+        onClick={() => updateUser(user)}
+      />
+      <Button
+        icon='pi pi-trash'
+        onClick={() => deleteUser(user)}
+      />
+    </>
   );
 }
 
@@ -39,7 +43,7 @@ export const UserList = () => {
       <Column field="email" header="Email" />
       <Column field="birthday" header="Birthday" />
       <Column field="associated_company.name" header="Company" />
-      <Column body={DeleteUserButton} header="Actions" />
+      <Column body={UserOptions} />
     </DataTable>
   );
 }

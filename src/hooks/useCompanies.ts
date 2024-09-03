@@ -5,38 +5,35 @@ import { readUsers } from '../services/userService';
 import { readCompanies } from '../services/companyService';
 
 export const useCompanies = () => {
-  // This adds a list of associated users to the Company interface
-  type ExtendedCompany = Company & {associated_users?: User[]};
-
-  const [companies, setCompanies] = useState<ExtendedCompany[]>([]);
+  const [companies, setCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const listedCompanies: ExtendedCompany[] = await readCompanies();
+        const listedCompanies: Company[] = await readCompanies();
         const listedUsers: User[] = await readUsers();
 
-        const mappedData: ExtendedCompany[] = listedCompanies.map(company => {
-          // Find the user names of those whose who are associated
-          company.associated_users = listedUsers.filter(user =>
-            company.id == user.company_id
-          );
+        const mappedData: Company[] = listedCompanies.map((company) => {
+          // Find the user id's of those whose who are associated
+          company.associated_users = listedUsers
+            .filter((user) => company.id == user.company_id)
+            .map((user) => user.id);
 
           return company;
         });
 
         setCompanies(mappedData);
-      } catch (error) {
-        setError(`Failed to fetch data, ${error}`);
+      } catch {
+        setError('Failed to fetch company data');
       } finally {
         setLoading(false);
       }
-    }
-    
+    };
+
     fetchCompanies();
   }, []);
 
-  return {companies, loading, error};
-}
+  return { companies, loading, error };
+};

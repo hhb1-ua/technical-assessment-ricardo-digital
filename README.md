@@ -1,4 +1,4 @@
-# assessment-ricardo
+# technical-assessment-ricardo-digital
 Technical assessment for Ricardo Digital
 ***
 

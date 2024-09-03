@@ -1,16 +1,26 @@
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { useCompanies } from '../hooks/useCompanies';
+import { Button } from 'primereact/button';
+import { Company } from '../types/Company';
 
-export const CompanyList = () => {
-  const { companies, loading, error } = useCompanies();
+export interface CompanyListProps {
+  companies: Company[];
+  removeCompany(company: Company): void;
+}
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+export const CompanyList = ({ companies, removeCompany }: CompanyListProps) => {
+  const CompanyOptions = (company: Company) => {
+    return <Button icon="pi pi-trash" onClick={() => removeCompany(company)} />;
+  };
 
-  if (error) {
-    return <p>{error}</p>;
+  const CompanyMembers = (company: Company) => {
+    return (
+      <ul>
+        {company.associated_usernames?.map(username => 
+          <li>{username}</li>
+        )}
+      </ul>
+    )
   }
 
   return (
@@ -20,6 +30,8 @@ export const CompanyList = () => {
       <Column field="name" header="Name" />
       <Column field="sector" header="Sector" />
       <Column field="address" header="Address" />
+      <Column body={CompanyMembers} header="Members" />
+      <Column body={CompanyOptions} />
     </DataTable>
   );
 };

@@ -5,8 +5,8 @@ import { Company } from '../types/Company';
 const ENDPOINT = 'http://localhost:3000/company';
 
 export const companySchema = z.object({
-  id: z.number().positive().optional(),
-  cif: z.string().regex(/^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/),
+  id: z.number().positive({ message: 'Must have a positive ID' }).optional(),
+  cif: z.string().regex(/^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/, { message: 'Must be a valid CIF' }),
   name: z.string(),
   sector: z.string(),
   address: z.string(),

@@ -5,4 +5,5 @@ export interface Company {
   sector: string;
   address: string;
   associated_users?: number[];
+  associated_usernames?: string[];
 }

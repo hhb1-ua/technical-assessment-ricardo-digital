@@ -72,5 +72,5 @@ Create a user interface using JavaScript, consisting of multiple screens that ar
 * I've implemented routing using ReactRouter.
 
 ### Additional functionality
-* The data sent to the API is previously sanitized using Zod, which allows data validation.
+* The data sent to the API is previously checked using Zod, which allows data validation.
 * I've written unit tests that can be executed using ```npm run test```.

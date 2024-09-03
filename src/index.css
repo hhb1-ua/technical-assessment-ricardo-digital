@@ -106,6 +106,10 @@ tr td:last-child {
   background: lightcoral;
 }
 
+.p-progress-spinner {
+  padding-top: 4rem;
+}
+
 .p-toast-summary {
   font-weight: bold;
   text-decoration: underline;
@@ -113,6 +117,11 @@ tr td:last-child {
 
 td ul {
   margin: 0rem;
+  padding-left: 0rem;
+}
+
+.table-wrapper {
+  padding-bottom: 2rem;
 }
 
 header {

@@ -64,7 +64,7 @@ Create a user interface using JavaScript, consisting of multiple screens that ar
 
 ### Running the application
 * To set up the application, simply download the repo and install the dependencies using ```npm install```.
-* To run the application, first start the mock backend using ```npm run api``` (ensure that json-server is installed in your machine). Then, run the actual application using ```npm run dev``` (this will execute it in developer mode).
+* To run the application, first start the mock backend using ```npm run api``` (ensure that json-server 0.17.4 is installed in your machine, later versions WILL cause issues). Then, run the actual application using ```npm run dev``` (this will execute it in developer mode).
 
 ### Extra points
 * I've implemented the interface using PrimeReact components.

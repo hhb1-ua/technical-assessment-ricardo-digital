@@ -3,18 +3,14 @@ import { Column } from 'primereact/column';
 import { useCompanies } from '../hooks/useCompanies';
 
 export const CompanyList = () => {
-  const {companies, loading, error} = useCompanies();
+  const { companies, loading, error } = useCompanies();
 
   if (loading) {
-    return (
-      <p>Loading...</p>
-    );
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return (
-      <p>{error}</p>
-    );
+    return <p>{error}</p>;
   }
 
   return (
@@ -26,4 +22,4 @@ export const CompanyList = () => {
       <Column field="address" header="Address" />
     </DataTable>
   );
-}
+};

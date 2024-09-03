@@ -1,5 +1,3 @@
 export const CompanyInput = () => {
-  return (
-    <></>
-  );
-}
+  return <></>;
+};

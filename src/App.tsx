@@ -1,11 +1,9 @@
-import { UserList } from "./components/UserList";
+import { Users } from "./pages/Users"
 
 const App = () => {
   return (
-    <>
-      <UserList />
-    </>
+    <Users />
   );
-}
+};
 
 export default App;

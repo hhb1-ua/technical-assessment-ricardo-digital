@@ -1,22 +1,75 @@
 body {
+  margin: 0;
+  padding: 0;
+
   background: whitesmoke;
+  font-size: 16px;
+  font-family: monospace;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
-.p-datatable {
-  font-size: 16px;
-  font-family: monospace;
+.user-input {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  padding-right: 2rem;
+  position: sticky;
+  top: 2rem;
+  left: 0;
 }
 
-.p-row-odd {
+.table-container {
+  padding-top: 2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.p-inputtext {
+  font-size: 16px;
+  font-family: monospace;
+  border: 2px solid lightgray;
+  background: whitesmoke;
+  margin-bottom: .5rem;
+  padding: .5rem .25rem;
+}
+
+.user-input .p-button {
+  font-size: 16px;
+  font-family: monospace;
+  border: 2px solid black;
+  background: black;
+  color: whitesmoke;
+  padding: .5rem .25rem;
+  font-weight: bold;
+}
+
+.p-dropdown {
+  border: none;
+}
+
+.p-dropdown-trigger {
+  display: none;
+}
+
+.p-dropdown-items-wrapper {
+  background: whitesmoke;
+}
+
+.p-dropdown-items-wrapper ul li {
+  padding: .25rem;
+}
+
+.p-dropdown-items-wrapper ul li:nth-child(odd) {
   background: lightgray;
 }
 
-.p-button {
+td .p-button {
   background: none;
   border: none;
-  margin-left: .75rem;
+  margin-left: 0.75rem;
 }
 
 .p-datatable-thead {
@@ -25,7 +78,11 @@ body {
 }
 
 tr td, tr th {
-  padding: .75rem;
+  padding: 0.75rem;
+}
+
+.p-row-odd {
+  background: lightgray;
 }
 
 tr td:first-child, tr th:first-child {

@@ -59,3 +59,18 @@ Create a user interface using JavaScript, consisting of multiple screens that ar
 * Provide a link to a public repository (e.g., GitHub) containing your solution.
 * Include instructions on how to set up and run your application, including the mock backend.
 * Ensure the repository includes a README file with an overview of your approach and any assumptions made.
+
+## Solution
+
+### Running the application
+* To set up the application, simply download the repo and install the dependencies using ```npm install```.
+* To run the application, first start the mock backend using ```npm run api``` (ensure that json-server is installed in your machine). Then, run the actual application using ```npm run dev``` (this will execute it in developer mode).
+
+### Extra points
+* I've implemented the interface using PrimeReact components.
+* I've used Axios as a request client.
+* I've implemented routing using ReactRouter.
+
+### Additional functionality
+* The data sent to the API is previously sanitized using Zod, which allows data validation.
+* I've written unit tests that can be executed using ```npm run test```.

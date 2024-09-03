@@ -6,6 +6,7 @@ import { UserInput } from "../components/UserInput";
 import { UserList } from "../components/UserList";
 import { Toast } from "primereact/toast";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export const Users = () => {
   const { users, loading, error, denied, addUser, modifyUser, removeUser, setDenied } = useUsers();
@@ -30,6 +31,10 @@ export const Users = () => {
 
   return (
     <>
+      <header>
+        <h1>Users</h1>
+        <p>Go to <Link to="/companies">Companies</Link></p>
+      </header>
       <Toast ref={toast} />
       <div className="table-container">
         <UserInput companies={companies} addUser={addUser} modifyUser={modifyUser} onSubmit={onSubmit} />

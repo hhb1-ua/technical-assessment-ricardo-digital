@@ -1,8 +1,16 @@
-import { Users } from "./pages/Users"
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Users } from "./pages/Users";
+import { Companies } from "./pages/Companies";
 
 const App = () => {
   return (
-    <Users />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Users />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/companies" element={<Companies />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

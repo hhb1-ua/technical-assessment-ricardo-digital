@@ -6,6 +6,7 @@ import { Toast } from "primereact/toast";
 import { useRef } from "react";
 import { CompanyList } from "../components/CompanyList";
 import { CompanyInput } from "../components/CompanyInput";
+import { Link } from "react-router-dom";
 
 export const Companies = () => {
   const { companies, loading, error, denied, addCompany, modifyCompany, removeCompany, setDenied } = useCompanies();
@@ -30,9 +31,13 @@ export const Companies = () => {
 
   return (
     <>
+      <header>
+        <h1>Companies</h1>
+        <p>Go to <Link to="/users">Users</Link></p>
+      </header>
       <Toast ref={toast} />
       <div className="table-container">
-        <CompanyInput users={users} addCompany={addCompany} modifyCompany={modifyCompany} onSubmit={onSubmit} />
+        <CompanyInput addCompany={addCompany} modifyCompany={modifyCompany} onSubmit={onSubmit} />
         <div className="table-wrapper">
           <CompanyList companies={companies} removeCompany={removeCompany} />
         </div>

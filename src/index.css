@@ -16,12 +16,12 @@ body {
   width: 16rem;
   padding-right: 2rem;
   position: sticky;
-  top: 2rem;
+  top: 6rem;
   left: 0;
+  z-index: 20;
 }
 
 .table-container {
-  padding-top: 2rem;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -79,6 +79,7 @@ td .p-button {
 
 tr td, tr th {
   padding: 0.75rem;
+  vertical-align: top;
 }
 
 .p-row-odd {
@@ -107,3 +108,20 @@ tr td:last-child {
   font-weight: bold;
   text-decoration: underline;
 }
+
+td ul {
+  margin: 0rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 4rem;
+  position: sticky;
+  top: 0rem;
+  background: whitesmoke;
+  z-index: 10;
+  padding-bottom: 2rem;
+}
+

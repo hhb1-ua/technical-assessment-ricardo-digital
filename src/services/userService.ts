@@ -2,7 +2,7 @@ import axios from 'axios';
 import { z } from 'zod';
 import { User } from '../types/User';
 
-const ENDPOINT = 'http://localhost:3000/user';
+const ENDPOINT = import.meta.env.VITE_ENDPOINT + '/user';
 
 export const userSchema = z.object({
   id: z.number().positive({ message: 'Must have a positive ID' }).optional(),

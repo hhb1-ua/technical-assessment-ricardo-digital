@@ -43,7 +43,7 @@ export const useUsers = () => {
       await createUser(newUser);
     } catch (e) {
       if (e instanceof ZodError) {
-        setDenied(e.issues[0].message); 
+        setDenied(e.issues[0].message);
       } else {
         setError('Failed to connect to server');
       }
@@ -89,6 +89,6 @@ export const useUsers = () => {
     fetchUsers,
     modifyUser,
     removeUser,
-    setDenied
+    setDenied,
   };
 };

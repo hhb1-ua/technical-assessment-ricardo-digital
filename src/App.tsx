@@ -1,6 +1,6 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Users } from "./pages/Users";
-import { Companies } from "./pages/Companies";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Users } from './pages/Users';
+import { Companies } from './pages/Companies';
 
 const App = () => {
   return (

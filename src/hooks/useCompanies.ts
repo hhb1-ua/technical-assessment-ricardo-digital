@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import { User } from '../types/User';
 import { Company } from '../types/Company';
 import { readUsers } from '../services/userService';
-import { createCompany, deleteCompany, readCompanies, updateCompany } from '../services/companyService';
+import {
+  createCompany,
+  deleteCompany,
+  readCompanies,
+  updateCompany,
+} from '../services/companyService';
 import { ZodError } from 'zod';
 
 export const useCompanies = () => {
@@ -21,7 +26,7 @@ export const useCompanies = () => {
         company.associated_users = listedUsers
           .filter((user) => company.id == user.company_id)
           .map((user) => user.id);
-        
+
         company.associated_usernames = listedUsers
           .filter((user) => company.id == user.company_id)
           .map((user) => user.name);
@@ -42,14 +47,14 @@ export const useCompanies = () => {
       await createCompany(newCompany);
     } catch (e) {
       if (e instanceof ZodError) {
-        setDenied(e.issues[0].message); 
+        setDenied(e.issues[0].message);
       } else {
         setError('Failed to connect to server');
       }
     } finally {
       await fetchCompanies();
     }
-  }
+  };
 
   const modifyCompany = async (modifiedCompany: Company) => {
     try {
@@ -63,7 +68,7 @@ export const useCompanies = () => {
     } finally {
       await fetchCompanies();
     }
-  }
+  };
 
   const removeCompany = async (deletedCompany: Company) => {
     try {
@@ -73,21 +78,21 @@ export const useCompanies = () => {
     } finally {
       await fetchCompanies();
     }
-  }
+  };
 
   useEffect(() => {
     fetchCompanies();
   }, []);
 
-  return { 
-    companies, 
-    loading, 
+  return {
+    companies,
+    loading,
     error,
     denied,
-    addCompany, 
+    addCompany,
     fetchCompanies,
     modifyCompany,
     removeCompany,
-    setDenied
+    setDenied,
   };
 };

@@ -16,12 +16,10 @@ export const CompanyList = ({ companies, removeCompany }: CompanyListProps) => {
   const CompanyMembers = (company: Company) => {
     return (
       <ul>
-        {company.associated_usernames?.map(username => 
-          <li>{username}</li>
-        )}
+        {company.associated_usernames?.map((username) => <li>{username}</li>)}
       </ul>
-    )
-  }
+    );
+  };
 
   return (
     <DataTable value={companies}>

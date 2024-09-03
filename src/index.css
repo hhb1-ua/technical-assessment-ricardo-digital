@@ -97,3 +97,13 @@ tr td:last-child {
 .pi {
   font-size: 1rem;
 }
+
+.p-toast-message {
+  padding: 2rem 1rem;
+  background: lightcoral;
+}
+
+.p-toast-summary {
+  font-weight: bold;
+  text-decoration: underline;
+}

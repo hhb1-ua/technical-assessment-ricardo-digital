@@ -3,7 +3,7 @@ import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import { User } from '../types/User';
 
-interface UserListProps {
+export interface UserListProps {
   users: User[];
   removeUser(user: User): void;
 }

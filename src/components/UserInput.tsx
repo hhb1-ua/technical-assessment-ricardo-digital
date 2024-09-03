@@ -6,13 +6,14 @@ import { User } from '../types/User';
 import { InputNumber } from 'primereact/inputnumber';
 import { Company } from '../types/Company';
 
-interface UserInputProps {
+export interface UserInputProps {
   companies: Company[];
   addUser(user: User): void;
   modifyUser(user: User): void;
+  onSubmit(): void;
 }
 
-export const UserInput = ({ companies, addUser, modifyUser }: UserInputProps) => {  
+export const UserInput = ({ companies, addUser, modifyUser, onSubmit }: UserInputProps) => {  
   const [input, setInput] = useState({});
   const [selected, setSelected] = useState(null);
 
@@ -20,8 +21,16 @@ export const UserInput = ({ companies, addUser, modifyUser }: UserInputProps) =>
     if (input.id) {
       modifyUser(input as User);
     } else {
-      addUser(input as User);
+      const parsedInput = {
+        dni: input.dni,
+        name: input.name,
+        email: input.email,
+        birthday: input.birthday,
+        company_id: input.company_id
+      }
+      addUser(parsedInput as Omit<User, 'id'>);
     }
+    onSubmit();
   }
 
   return (

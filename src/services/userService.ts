@@ -5,10 +5,10 @@ import { User } from '../types/User';
 const ENDPOINT = 'http://localhost:3000/user';
 
 export const userSchema = z.object({
-  id: z.number().positive().optional(),
+  id: z.number().positive({ message: 'Must have a positive ID' }).optional(),
   dni: z.string().regex(/^(\d{8})([A-Z])$/, { message: 'Must be a valid DNI' }),
   name: z.string(),
-  email: z.string().email(),
+  email: z.string().email({ message: 'Must have a valid email address' }),
   birthday: z.string().date(),
   company_id: z.number(),
 });

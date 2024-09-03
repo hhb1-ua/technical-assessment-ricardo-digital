@@ -38,12 +38,12 @@ export const useUsers = () => {
     }
   };
 
-  const addUser = async (newUser: User) => {
+  const addUser = async (newUser: Omit<User, 'id'>) => {
     try {
       await createUser(newUser);
     } catch (e) {
       if (e instanceof ZodError) {
-        setDenied(e.message); 
+        setDenied(e.issues[0].message); 
       } else {
         setError('Failed to connect to server');
       }
@@ -57,7 +57,7 @@ export const useUsers = () => {
       await updateUser(modifiedUser);
     } catch (e) {
       if (e instanceof ZodError) {
-        setDenied(e.message);
+        setDenied(e.issues[0].message);
       } else {
         setError('Failed to connect to server');
       }
@@ -89,5 +89,6 @@ export const useUsers = () => {
     fetchUsers,
     modifyUser,
     removeUser,
+    setDenied
   };
 };

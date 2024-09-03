@@ -9,22 +9,6 @@
       "company_id": 8
     },
     {
-      "id": 2,
-      "dni": "38863772I",
-      "name": "Thelma Versey",
-      "email": "tversey1@tinyurl.com",
-      "birthday": "1981-01-10",
-      "company_id": 5
-    },
-    {
-      "id": 3,
-      "dni": "43163797E",
-      "name": "Graeme McCumskay",
-      "email": "gmccumskay2@imdb.com",
-      "birthday": "1986-03-14",
-      "company_id": 2
-    },
-    {
       "id": 4,
       "dni": "83283053M",
       "name": "Theodore Boatswain",

@@ -19,14 +19,14 @@ export const Companies = () => {
     setDenied,
   } = useCompanies();
 
-  const toast = useRef(null);
+  const toast = useRef<Toast>(null);
 
   if (loading) return <ProgressSpinner />;
 
   if (error) return <Message severity="error" text={error} />;
 
   const onSubmit = () => {
-    if (denied) {
+    if (denied && toast.current) {
       toast.current.show({
         summary: 'Validation error',
         detail: denied,

@@ -5,7 +5,7 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 
 interface CompanyInputProps {
-  addCompany(company: Company): void;
+  addCompany(company: Omit<Company, 'id'>): void;
   modifyCompany(company: Company): void;
   onSubmit(): void;
 }
@@ -15,20 +15,28 @@ export const CompanyInput = ({
   modifyCompany,
   onSubmit,
 }: CompanyInputProps) => {
-  const [input, setInput] = useState({});
+  type NullableCompany = { [key in keyof Company]: Company[key] | null };
+
+  const [input, setInput] = useState<NullableCompany>({
+    id: null,
+    cif: null,
+    name: null,
+    sector: null,
+    address: null,
+  });
 
   const onClick = () => {
     if (input.id) {
       modifyCompany(input as Company);
     } else {
-      const parsedInput = {
-        cif: input.cif,
-        name: input.name,
-        sector: input.sector,
-        address: input.address,
+      const parsedInput: Omit<Company, 'id'> = {
+        cif: input.cif ?? '',
+        name: input.name ?? '',
+        sector: input.sector ?? '',
+        address: input.address ?? '',
       };
 
-      addCompany(parsedInput as Omit<Company, 'id'>);
+      addCompany(parsedInput);
     }
     onSubmit();
   };

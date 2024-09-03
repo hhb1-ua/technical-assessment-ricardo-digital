@@ -8,7 +8,7 @@ import { Company } from '../types/Company';
 
 export interface UserInputProps {
   companies: Company[];
-  addUser(user: User): void;
+  addUser(user: Omit<User, 'id'>): void;
   modifyUser(user: User): void;
   onSubmit(): void;
 }
@@ -19,21 +19,30 @@ export const UserInput = ({
   modifyUser,
   onSubmit,
 }: UserInputProps) => {
-  const [input, setInput] = useState({});
+  type NullableUser = { [key in keyof User]: User[key] | null };
+
+  const [input, setInput] = useState<NullableUser>({
+    id: null,
+    dni: null,
+    name: null,
+    email: null,
+    birthday: null,
+    company_id: null,
+  });
   const [selected, setSelected] = useState(null);
 
   const onClick = () => {
     if (input.id) {
       modifyUser(input as User);
     } else {
-      const parsedInput = {
-        dni: input.dni,
-        name: input.name,
-        email: input.email,
-        birthday: input.birthday,
-        company_id: input.company_id,
+      const parsedInput: Omit<User, 'id'> = {
+        dni: input.dni ?? '',
+        name: input.name ?? '',
+        email: input.email ?? '',
+        birthday: input.birthday ?? '',
+        company_id: input.company_id ?? 0,
       };
-      addUser(parsedInput as Omit<User, 'id'>);
+      addUser(parsedInput);
     }
     onSubmit();
   };
